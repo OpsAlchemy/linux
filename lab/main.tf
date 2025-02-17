@@ -44,7 +44,7 @@ resource "azurerm_linux_virtual_machine" "example" {
   name                = "example-machine"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
-  size                = "Standard_F2"
+  size                = "Standard_B1s"
   admin_username      = "azureuser"
   network_interface_ids = [
     azurerm_network_interface.example.id,
@@ -60,9 +60,9 @@ resource "azurerm_linux_virtual_machine" "example" {
   }
 
   source_image_reference {
-    publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-jammy"
-    sku       = "22_04-lts"
+    publisher = "Redhat"
+    offer     = "RHEL"
+    sku       = "9-lvm-gen2"
     version   = "latest"
   }
 }
@@ -70,6 +70,29 @@ resource "azurerm_linux_virtual_machine" "example" {
 resource "local_file" "private_key" {
   filename = "keys/private_key.pem"
   content  = tls_private_key.ssh_key.private_key_pem
+}
+
+resource "azurerm_network_security_group" "example" {
+  name                = "example-nsg"
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+  security_rule {
+    name                       = "test123"
+    priority                   = 100
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "*"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+
+}
+
+resource "azurerm_network_interface_security_group_association" "example" {
+  network_interface_id      = azurerm_network_interface.example.id
+  network_security_group_id = azurerm_network_security_group.example.id
 }
 
 output "public_ip" {
