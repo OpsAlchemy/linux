@@ -10,4 +10,4 @@ elif [ "$choice" == "Down" ]; then
     terraform destroy -auto-approve
 else
     echo "Invalid choice. Please enter 'Up' or 'Down'."
-fi
+fi       
