@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>System Stats - Linux Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "System Stats";
+        var mkdocs_page_input_path = "4.3. Hardware Exploration and System Stats.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Linux Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">1. Core Utilities</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.%20core-utils/">Core Utilities Guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">2. Data Streams</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../2.%20data-streams/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../2.1.%20data-streams-practices/">Practices</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">3. Working as Root</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../3.%20working-as-root/">Working as Root</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">4. Tools for Problem Solving</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../4.1.%20tools%20for%20problem%20solving/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../4.2.%20more%20monitoring%20tools/">More Monitoring Tools</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">System Stats</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-introduction">1. Introduction:</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../4.4.%20notes/">Extras</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Linux Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">4. Tools for Problem Solving</li>
+      <li class="breadcrumb-item active">System Stats</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h3 id="comprehensive-guide-to-hardware-exploration-and-system-statistics-in-linux"><strong>Comprehensive Guide to Hardware Exploration and System Statistics in Linux</strong><a class="headerlink" href="#comprehensive-guide-to-hardware-exploration-and-system-statistics-in-linux" title="Permanent link">&para;</a></h3>
+<hr />
+<h4 id="1-introduction"><strong>1. Introduction:</strong><a class="headerlink" href="#1-introduction" title="Permanent link">&para;</a></h4>
+<p>Monitoring system hardware and performance is essential for effective system administration. In Linux, several tools provide insights into hardware components, system activities, and performance statistics. This guide covers hardware inspection tools and the powerful <code>sar</code> utility for system activity reporting.</p>
+<hr />
+<h3 id="2-hardware-exploration-in-linux"><strong>2. Hardware Exploration in Linux</strong><a class="headerlink" href="#2-hardware-exploration-in-linux" title="Permanent link">&para;</a></h3>
+<h4 id="21-understanding-hardware-information"><strong>2.1 Understanding Hardware Information:</strong><a class="headerlink" href="#21-understanding-hardware-information" title="Permanent link">&para;</a></h4>
+<p>System hardware information can be crucial for tasks such as:
+- Planning upgrades (e.g., RAM or CPU upgrades).
+- Troubleshooting hardware issues.
+- Gathering information remotely without physically accessing the system.</p>
+<hr />
+<h4 id="22-tools-for-hardware-exploration"><strong>2.2 Tools for Hardware Exploration:</strong><a class="headerlink" href="#22-tools-for-hardware-exploration" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Data Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lshw</code></td>
+<td>List detailed hardware information</td>
+<td>SMBIOS (System Management BIOS)</td>
+</tr>
+<tr>
+<td><code>dmidecode</code></td>
+<td>Decode DMI tables for hardware info</td>
+<td>SMBIOS</td>
+</tr>
+<tr>
+<td><code>lsusb</code></td>
+<td>List USB devices</td>
+<td>/proc and /sys filesystems</td>
+</tr>
+<tr>
+<td><code>lspci</code></td>
+<td>List PCI devices</td>
+<td>/proc and /sys filesystems</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="23-exploring-system-hardware-with-lshw"><strong>2.3 Exploring System Hardware with <code>lshw</code></strong><a class="headerlink" href="#23-exploring-system-hardware-with-lshw" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Provides detailed information about CPU, RAM, disks, and more.</li>
+</ul>
+<p><strong>Installation:</strong></p>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>lshw<span class="w">                   </span><span class="c1"># Fedora-based systems</span>
+</code></pre></div>
+
+<p><strong>Basic Usage:</strong></p>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>lshw<span class="w"> </span><span class="p">|</span><span class="w"> </span>less<span class="w">                           </span><span class="c1"># Display hardware details</span>
+sudo<span class="w"> </span>lshw<span class="w"> </span>-short<span class="w">                           </span><span class="c1"># Summary view</span>
+sudo<span class="w"> </span>lshw<span class="w"> </span>-C<span class="w"> </span>memory<span class="w">                        </span><span class="c1"># Specific category (memory)</span>
+</code></pre></div>
+
+<p><strong>Example:</strong></p>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>lshw<span class="w"> </span>-class<span class="w"> </span>cpu<span class="w">                       </span><span class="c1"># Display CPU details</span>
+</code></pre></div>
+
+<hr />
+<h5 id="24-inspecting-dmi-data-with-dmidecode"><strong>2.4 Inspecting DMI Data with <code>dmidecode</code></strong><a class="headerlink" href="#24-inspecting-dmi-data-with-dmidecode" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Extracts system information from SMBIOS.</li>
+<li>Can be used to find motherboard details, RAM slots, and other hardware components.</li>
+</ul>
+<p><strong>Command:</strong></p>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>dmidecode<span class="w"> </span><span class="p">|</span><span class="w"> </span>less<span class="w">                      </span><span class="c1"># Full system information</span>
+sudo<span class="w"> </span>dmidecode<span class="w"> </span>-t<span class="w"> </span>memory<span class="w">                   </span><span class="c1"># Only memory information</span>
+sudo<span class="w"> </span>dmidecode<span class="w"> </span>-t<span class="w"> </span><span class="m">2</span><span class="w">                        </span><span class="c1"># Motherboard information</span>
+</code></pre></div>
+
+<p><strong>Example Output:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="nx">Handle</span><span class="w"> </span><span class="mh">0x0002</span><span class="p">,</span><span class="w"> </span><span class="nx">DMI</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="nx">bytes</span>
+<span class="nx">Base</span><span class="w"> </span><span class="nx">Board</span><span class="w"> </span><span class="nx">Information</span>
+<span class="w">    </span><span class="nx">Manufacturer</span><span class="p">:</span><span class="w"> </span><span class="nx">Dell</span><span class="w"> </span><span class="nx">Inc</span><span class="p">.</span>
+<span class="w">    </span><span class="nx">Product</span><span class="w"> </span><span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="nx">P3CX4</span>
+<span class="w">    </span><span class="nx">Version</span><span class="p">:</span><span class="w"> </span><span class="nx">A01</span>
+</code></pre></div>
+
+<h5 id="common-use-case-checking-ram-capacity"><strong>Common Use Case: Checking RAM Capacity</strong><a class="headerlink" href="#common-use-case-checking-ram-capacity" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>dmidecode<span class="w"> </span>-t<span class="w"> </span>memory<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>size
+</code></pre></div>
+
+<hr />
+<h4 id="25-usb-and-pci-device-inspection"><strong>2.5 USB and PCI Device Inspection</strong><a class="headerlink" href="#25-usb-and-pci-device-inspection" title="Permanent link">&para;</a></h4>
+<h5 id="command-list-usb-devices"><strong>Command: List USB Devices</strong><a class="headerlink" href="#command-list-usb-devices" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code>lsusb<span class="w">                                  </span><span class="c1"># List all connected USB devices</span>
+lsusb<span class="w"> </span>-v<span class="w"> </span><span class="p">|</span><span class="w"> </span>less<span class="w">                        </span><span class="c1"># Detailed USB information</span>
+</code></pre></div>
+
+<p><strong>Example Output:</strong></p>
+<div class="codehilite"><pre><span></span><code>Bus 001 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub
+</code></pre></div>
+
+<h5 id="command-list-pci-devices"><strong>Command: List PCI Devices</strong><a class="headerlink" href="#command-list-pci-devices" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code>lspci<span class="w">                                 </span><span class="c1"># List PCI devices</span>
+lspci<span class="w"> </span>-v<span class="w"> </span><span class="p">|</span><span class="w"> </span>less<span class="w">                       </span><span class="c1"># Verbose details about PCI hardware</span>
+lspci<span class="w"> </span>-nn<span class="w">                             </span><span class="c1"># Show device IDs</span>
+</code></pre></div>
+
+<hr />
+<h4 id="26-caution-with-lshw-and-dmidecode"><strong>2.6 Caution with <code>lshw</code> and <code>dmidecode</code>:</strong><a class="headerlink" href="#26-caution-with-lshw-and-dmidecode" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The accuracy of data from <code>lshw</code> and <code>dmidecode</code> can be inconsistent.</li>
+<li>Sometimes the information contained in DMI tables is inaccurate, incomplete, or outdated.</li>
+</ul>
+<hr />
+<h3 id="3-monitoring-system-statistics-with-sar"><strong>3. Monitoring System Statistics with SAR</strong><a class="headerlink" href="#3-monitoring-system-statistics-with-sar" title="Permanent link">&para;</a></h3>
+<h4 id="31-introduction-to-sar"><strong>3.1 Introduction to SAR:</strong><a class="headerlink" href="#31-introduction-to-sar" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>SAR (System Activity Reporter)</strong> is a part of the <code>sysstat</code> package.</li>
+<li>Collects and displays performance data at regular intervals.</li>
+<li>Stores data in <code>/var/log/sa/</code>.</li>
+</ul>
+<h5 id="installation"><strong>Installation:</strong><a class="headerlink" href="#installation" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>sysstat<span class="w">             </span><span class="c1"># Install SAR and related tools</span>
+</code></pre></div>
+
+<hr />
+<h4 id="32-configuring-sar"><strong>3.2 Configuring SAR:</strong><a class="headerlink" href="#32-configuring-sar" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Data is collected every 10 minutes by default.</li>
+<li>Logs are stored in <code>/var/log/sa/saDD</code>, where <code>DD</code> is the day of the month.</li>
+</ul>
+<h5 id="changing-the-collection-interval"><strong>Changing the Collection Interval:</strong><a class="headerlink" href="#changing-the-collection-interval" title="Permanent link">&para;</a></h5>
+<p>Edit the sysstat configuration file:</p>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/sysconfig/sysstat
+</code></pre></div>
+
+<p>Change:</p>
+<div class="codehilite"><pre><span></span><code>HISTORY=28
+INTERVAL=600
+</code></pre></div>
+
+<ul>
+<li><strong>INTERVAL=60:</strong> Collect every minute (caution: large file sizes).</li>
+</ul>
+<hr />
+<h4 id="33-basic-usage-of-sar"><strong>3.3 Basic Usage of SAR:</strong><a class="headerlink" href="#33-basic-usage-of-sar" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sar</code></td>
+<td>Default CPU usage of the current day</td>
+</tr>
+<tr>
+<td><code>sar -A</code></td>
+<td>Display all available data</td>
+</tr>
+<tr>
+<td><code>sar -r</code></td>
+<td>Display memory statistics</td>
+</tr>
+<tr>
+<td><code>sar -u</code></td>
+<td>Show CPU utilization</td>
+</tr>
+<tr>
+<td><code>sar -n ALL</code></td>
+<td>Network statistics</td>
+</tr>
+<tr>
+<td><code>sar -P ALL</code></td>
+<td>Per-CPU usage statistics</td>
+</tr>
+<tr>
+<td><code>sar -s 07:50:00 -e 08:11:00</code></td>
+<td>Data between specific times</td>
+</tr>
+<tr>
+<td><code>sar -f /var/log/sa/sa02</code></td>
+<td>View data from a specific day</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h5 id="34-real-time-memory-monitoring-with-sar"><strong>3.4 Real-Time Memory Monitoring with SAR:</strong><a class="headerlink" href="#34-real-time-memory-monitoring-with-sar" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-r<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">10</span><span class="w">                         </span><span class="c1"># Memory stats every 5 seconds, 10 times</span>
+</code></pre></div>
+
+<h5 id="scenario-high-memory-usage-analysis"><strong>Scenario: High Memory Usage Analysis</strong><a class="headerlink" href="#scenario-high-memory-usage-analysis" title="Permanent link">&para;</a></h5>
+<p><strong>Problem:</strong> Identify memory trends when the system is under load.<br />
+<strong>Solution:</strong></p>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-r<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span><span class="w">                          </span><span class="c1"># Monitor memory every second for 5 iterations</span>
+</code></pre></div>
+
+<hr />
+<h4 id="35-real-time-cpu-monitoring"><strong>3.5 Real-Time CPU Monitoring:</strong><a class="headerlink" href="#35-real-time-cpu-monitoring" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-u<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">5</span><span class="w">                         </span><span class="c1"># CPU stats every 2 seconds, 5 times</span>
+</code></pre></div>
+
+<p><strong>Example Output:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">01</span><span class="w">    </span><span class="n">CPU</span><span class="w">  </span><span class="o">%</span><span class="n">user</span><span class="w">  </span><span class="o">%</span><span class="n">nice</span><span class="w"> </span><span class="o">%</span><span class="n">system</span><span class="w"> </span><span class="o">%</span><span class="n">iowait</span><span class="w">  </span><span class="o">%</span><span class="n">steal</span><span class="w">  </span><span class="o">%</span><span class="n">idle</span>
+<span class="mi">12</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">02</span><span class="w">    </span><span class="n">all</span><span class="w">   </span><span class="mf">5.00</span><span class="w">   </span><span class="mf">0.00</span><span class="w">   </span><span class="mf">2.00</span><span class="w">   </span><span class="mf">1.00</span><span class="w">    </span><span class="mf">0.00</span><span class="w">   </span><span class="mf">92.00</span>
+</code></pre></div>
+
+<hr />
+<h4 id="36-network-monitoring"><strong>3.6 Network Monitoring:</strong><a class="headerlink" href="#36-network-monitoring" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-n<span class="w"> </span>DEV<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span><span class="w">                     </span><span class="c1"># Monitor network devices every second for 5 times</span>
+</code></pre></div>
+
+<p><strong>Example:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">01</span><span class="w"> </span><span class="n">IFACE</span><span class="w">  </span><span class="n">rxpck</span><span class="sr">/s txpck/s rxkB/s txkB/s</span>
+<span class="mi">12</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">02</span><span class="w"> </span><span class="n">eth0</span><span class="w">      </span><span class="mf">5.00</span><span class="w">   </span><span class="mf">4.00</span><span class="w">   </span><span class="mf">0.50</span><span class="w">   </span><span class="mf">0.40</span>
+</code></pre></div>
+
+<hr />
+<h4 id="37-analyzing-old-data"><strong>3.7 Analyzing Old Data:</strong><a class="headerlink" href="#37-analyzing-old-data" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-A<span class="w"> </span>-f<span class="w"> </span>/var/log/sa/sa02<span class="w"> </span><span class="p">|</span><span class="w"> </span>less<span class="w">   </span><span class="c1"># View logs from the 2nd of the month</span>
+</code></pre></div>
+
+<h5 id="filtering-specific-data"><strong>Filtering Specific Data:</strong><a class="headerlink" href="#filtering-specific-data" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-urS<span class="w">                           </span><span class="c1"># Display CPU, memory, and swap space data</span>
+</code></pre></div>
+
+<hr />
+<h3 id="4-practical-scenario-performance-troubleshooting-with-sar"><strong>4. Practical Scenario: Performance Troubleshooting with SAR</strong><a class="headerlink" href="#4-practical-scenario-performance-troubleshooting-with-sar" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> System slowdown during specific periods.<br />
+<strong>Solution:</strong>
+1. Analyze CPU and memory usage from previous days:
+   <code>bash
+   sar -A -f /var/log/sa/sa02</code>
+2. Identify load spikes:
+   <code>bash
+   sar -q -s 08:00:00 -e 09:00:00</code>
+3. Check network activity:
+   <code>bash
+   sar -n DEV -s 08:00:00 -e 09:00:00</code>
+- <strong>Insight:</strong> Correlate network spikes with CPU load to identify the root cause.</p>
+<hr />
+<h3 id="5-best-practices"><strong>5. Best Practices:</strong><a class="headerlink" href="#5-best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Monitor Regularly:</strong> Automate <code>sar</code> reports using cron.</li>
+<li><strong>Analyze Historical Data:</strong> Keep logs for at least a month for trend analysis.</li>
+<li><strong>Monitor in Real-Time:</strong> Combine <code>sar</code> with tools like <code>top</code> and <code>htop</code>.</li>
+<li><strong>Correlate Metrics:</strong> CPU, memory, and network activity should be analyzed together.</li>
+</ul>
+<hr />
+<h3 id="6-summary"><strong>6. Summary:</strong><a class="headerlink" href="#6-summary" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tools like <code>lshw</code>, <code>dmidecode</code>, <code>lsusb</code>, and <code>lspci</code> provide comprehensive hardware insights.</li>
+<li>SAR is invaluable for tracking system performance over time.</li>
+<li>Automating data collection and periodic review is crucial for proactive maintenance.</li>
+</ul>
+<h3 id="advanced-sar-usage-and-performance-troubleshooting-in-linux"><strong>Advanced SAR Usage and Performance Troubleshooting in Linux</strong><a class="headerlink" href="#advanced-sar-usage-and-performance-troubleshooting-in-linux" title="Permanent link">&para;</a></h3>
+<hr />
+<h4 id="1-introduction_1"><strong>1. Introduction:</strong><a class="headerlink" href="#1-introduction_1" title="Permanent link">&para;</a></h4>
+<p>The <strong>System Activity Reporter (SAR)</strong> is a versatile and powerful tool for monitoring and diagnosing performance issues. It can collect, store, and analyze system activity data such as CPU usage, memory, I/O, and network statistics. SAR is part of the <strong>sysstat</strong> package and is essential for analyzing both real-time and historical performance data.</p>
+<hr />
+<h3 id="2-installation-and-configuration"><strong>2. Installation and Configuration:</strong><a class="headerlink" href="#2-installation-and-configuration" title="Permanent link">&para;</a></h3>
+<h4 id="21-installing-sar-sysstat-package"><strong>2.1 Installing SAR (sysstat package):</strong><a class="headerlink" href="#21-installing-sar-sysstat-package" title="Permanent link">&para;</a></h4>
+<p>On Red Hat-based distributions:</p>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>sysstat
+</code></pre></div>
+
+<p>On Debian-based distributions:</p>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>sysstat
+</code></pre></div>
+
+<h4 id="22-enabling-sar-data-collection"><strong>2.2 Enabling SAR Data Collection:</strong><a class="headerlink" href="#22-enabling-sar-data-collection" title="Permanent link">&para;</a></h4>
+<p>After installation, data collection may not be enabled by default. Enable it using:</p>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/default/sysstat<span class="w">        </span><span class="c1"># On Debian/Ubuntu</span>
+sudo<span class="w"> </span>nano<span class="w"> </span>/etc/sysconfig/sysstat<span class="w">      </span><span class="c1"># On Red Hat/CentOS</span>
+</code></pre></div>
+
+<p>Set:</p>
+<div class="codehilite"><pre><span></span><code>ENABLED=&quot;true&quot;
+</code></pre></div>
+
+<p>Restart the sysstat service:</p>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>sysstat
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>sysstat
+</code></pre></div>
+
+<hr />
+<h3 id="3-understanding-sar-log-files"><strong>3. Understanding SAR Log Files:</strong><a class="headerlink" href="#3-understanding-sar-log-files" title="Permanent link">&para;</a></h3>
+<h4 id="31-log-file-location"><strong>3.1 Log File Location:</strong><a class="headerlink" href="#31-log-file-location" title="Permanent link">&para;</a></h4>
+<p>SAR data is stored in:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="nb">log</span><span class="o">/</span><span class="n">sa</span><span class="o">/</span><span class="n">saDD</span>
+</code></pre></div>
+
+<ul>
+<li><strong>DD:</strong> Represents the day of the month (e.g., <code>sa01</code>, <code>sa15</code>).</li>
+<li>Logs are maintained daily and kept for one month by default.</li>
+</ul>
+<h5 id="viewing-logs"><strong>Viewing Logs:</strong><a class="headerlink" href="#viewing-logs" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code>ls<span class="w"> </span>/var/log/sa
+</code></pre></div>
+
+<h4 id="32-log-file-structure"><strong>3.2 Log File Structure:</strong><a class="headerlink" href="#32-log-file-structure" title="Permanent link">&para;</a></h4>
+<p>Each log file contains:
+- CPU, memory, and network statistics.
+- Data collected every 10 minutes by default.
+- Previous days' logs can be accessed using the <code>-f</code> option.</p>
+<hr />
+<h3 id="4-basic-sar-commands"><strong>4. Basic SAR Commands:</strong><a class="headerlink" href="#4-basic-sar-commands" title="Permanent link">&para;</a></h3>
+<h4 id="41-display-overall-cpu-usage"><strong>4.1 Display Overall CPU Usage:</strong><a class="headerlink" href="#41-display-overall-cpu-usage" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>sar<span class="w">                                </span><span class="c1"># Displays current day&#39;s CPU statistics</span>
+sar<span class="w"> </span>-u<span class="w">                             </span><span class="c1"># Similar, but explicitly for CPU</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>%user</th>
+<th>%nice</th>
+<th>%system</th>
+<th>%iowait</th>
+<th>%steal</th>
+<th>%idle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00:01</td>
+<td>4.0</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>0.5</td>
+<td>0.0</td>
+<td>94.5</td>
+</tr>
+</tbody>
+</table>
+<h5 id="explanation"><strong>Explanation:</strong><a class="headerlink" href="#explanation" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>%user:</strong> Time spent on user processes.</li>
+<li><strong>%system:</strong> Time spent on kernel processes.</li>
+<li><strong>%iowait:</strong> Time waiting for I/O.</li>
+<li><strong>%idle:</strong> Time CPU remains idle.</li>
+</ul>
+<hr />
+<h4 id="42-display-memory-statistics"><strong>4.2 Display Memory Statistics:</strong><a class="headerlink" href="#42-display-memory-statistics" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-r<span class="w">                             </span><span class="c1"># Real-time memory statistics</span>
+sar<span class="w"> </span>-r<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span><span class="w">                         </span><span class="c1"># Memory stats every second, 5 iterations</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>kbmemfree</th>
+<th>kbmemused</th>
+<th>%memused</th>
+<th>kbbuffers</th>
+<th>kbcached</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00:01</td>
+<td>2500000</td>
+<td>1500000</td>
+<td>60.0</td>
+<td>102000</td>
+<td>2048000</td>
+</tr>
+</tbody>
+</table>
+<h5 id="key-metrics"><strong>Key Metrics:</strong><a class="headerlink" href="#key-metrics" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>kbmemfree:</strong> Free physical memory.</li>
+<li><strong>kbmemused:</strong> Used physical memory.</li>
+<li><strong>%memused:</strong> Percentage of RAM used.</li>
+<li><strong>kbbuffers:</strong> Kernel buffers.</li>
+<li><strong>kbcached:</strong> Cache memory.</li>
+</ul>
+<hr />
+<h4 id="43-monitor-swap-usage"><strong>4.3 Monitor Swap Usage:</strong><a class="headerlink" href="#43-monitor-swap-usage" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-S<span class="w">                             </span><span class="c1"># Display swap space utilization</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>kbswpfree</th>
+<th>kbswpused</th>
+<th>%swpused</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00:01</td>
+<td>2097148</td>
+<td>0</td>
+<td>0.0</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="44-monitor-disk-io"><strong>4.4 Monitor Disk I/O:</strong><a class="headerlink" href="#44-monitor-disk-io" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-d<span class="w">                             </span><span class="c1"># Basic disk I/O statistics</span>
+sar<span class="w"> </span>-d<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span><span class="w">                         </span><span class="c1"># Updates every second, 5 times</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>DEV</th>
+<th>tps</th>
+<th>rd_sec/s</th>
+<th>wr_sec/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00:01</td>
+<td>sda</td>
+<td>10.00</td>
+<td>512.00</td>
+<td>1024.00</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="45-network-statistics"><strong>4.5 Network Statistics:</strong><a class="headerlink" href="#45-network-statistics" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-n<span class="w"> </span>DEV<span class="w">                        </span><span class="c1"># Network interface statistics</span>
+sar<span class="w"> </span>-n<span class="w"> </span>ALL<span class="w">                        </span><span class="c1"># All network-related statistics</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>IFACE</th>
+<th>rxpck/s</th>
+<th>txpck/s</th>
+<th>rxkB/s</th>
+<th>txkB/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00:01</td>
+<td>eth0</td>
+<td>100.0</td>
+<td>50.0</td>
+<td>1.0</td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="5-advanced-sar-usage"><strong>5. Advanced SAR Usage:</strong><a class="headerlink" href="#5-advanced-sar-usage" title="Permanent link">&para;</a></h3>
+<h4 id="51-historical-data-analysis"><strong>5.1 Historical Data Analysis:</strong><a class="headerlink" href="#51-historical-data-analysis" title="Permanent link">&para;</a></h4>
+<p>To view data from a specific day:</p>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-A<span class="w"> </span>-f<span class="w"> </span>/var/log/sa/sa15<span class="w">          </span><span class="c1"># Full data from the 15th of the month</span>
+</code></pre></div>
+
+<h4 id="52-display-data-for-specific-time-range"><strong>5.2 Display Data for Specific Time Range:</strong><a class="headerlink" href="#52-display-data-for-specific-time-range" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-u<span class="w"> </span>-s<span class="w"> </span><span class="m">08</span>:00:00<span class="w"> </span>-e<span class="w"> </span><span class="m">12</span>:00:00<span class="w">      </span><span class="c1"># CPU stats from 8 AM to 12 PM</span>
+</code></pre></div>
+
+<h4 id="53-cpu-usage-per-core"><strong>5.3 CPU Usage per Core:</strong><a class="headerlink" href="#53-cpu-usage-per-core" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-P<span class="w"> </span>ALL<span class="w">                         </span><span class="c1"># CPU usage for each core</span>
+</code></pre></div>
+
+<h4 id="54-real-time-monitoring-for-a-specific-duration"><strong>5.4 Real-Time Monitoring for a Specific Duration:</strong><a class="headerlink" href="#54-real-time-monitoring-for-a-specific-duration" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-r<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">10</span><span class="w">                        </span><span class="c1"># Memory usage every 5 seconds for 10 intervals</span>
+</code></pre></div>
+
+<hr />
+<h3 id="6-real-world-scenarios"><strong>6. Real-World Scenarios:</strong><a class="headerlink" href="#6-real-world-scenarios" title="Permanent link">&para;</a></h3>
+<h4 id="scenario-1-diagnosing-high-cpu-usage"><strong>Scenario 1: Diagnosing High CPU Usage</strong><a class="headerlink" href="#scenario-1-diagnosing-high-cpu-usage" title="Permanent link">&para;</a></h4>
+<p><strong>Problem:</strong> The server is running slow, suspected CPU overload.<br />
+<strong>Solution:</strong></p>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-u<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span><span class="w">                         </span><span class="c1"># Real-time CPU usage every second</span>
+sar<span class="w"> </span>-P<span class="w"> </span>ALL<span class="w"> </span>-s<span class="w"> </span><span class="m">07</span>:50:00<span class="w"> </span>-e<span class="w"> </span><span class="m">08</span>:11:00<span class="w"> </span><span class="c1"># Per-core CPU usage for a specific period</span>
+</code></pre></div>
+
+<ul>
+<li><strong>Check:</strong> Look for high %user or %system time.</li>
+</ul>
+<hr />
+<h4 id="scenario-2-memory-pressure-analysis"><strong>Scenario 2: Memory Pressure Analysis</strong><a class="headerlink" href="#scenario-2-memory-pressure-analysis" title="Permanent link">&para;</a></h4>
+<p><strong>Problem:</strong> Applications are being killed by the OOM (Out of Memory) killer.<br />
+<strong>Solution:</strong></p>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-r<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">10</span><span class="w">                        </span><span class="c1"># Check memory every second for 10 iterations</span>
+sar<span class="w"> </span>-S<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">10</span><span class="w">                        </span><span class="c1"># Swap usage in the same period</span>
+</code></pre></div>
+
+<ul>
+<li><strong>Check:</strong> High %memused and significant swap usage indicate memory pressure.</li>
+</ul>
+<hr />
+<h4 id="scenario-3-disk-bottleneck-analysis"><strong>Scenario 3: Disk Bottleneck Analysis</strong><a class="headerlink" href="#scenario-3-disk-bottleneck-analysis" title="Permanent link">&para;</a></h4>
+<p><strong>Problem:</strong> I/O-bound applications are performing poorly.<br />
+<strong>Solution:</strong></p>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-d<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">5</span><span class="w">                         </span><span class="c1"># Disk I/O every 2 seconds, 5 times</span>
+sar<span class="w"> </span>-p<span class="w">                             </span><span class="c1"># Partition-level I/O statistics</span>
+</code></pre></div>
+
+<ul>
+<li><strong>Check:</strong> High tps or %util values indicate disk saturation.</li>
+</ul>
+<hr />
+<h4 id="scenario-4-network-performance-issue"><strong>Scenario 4: Network Performance Issue</strong><a class="headerlink" href="#scenario-4-network-performance-issue" title="Permanent link">&para;</a></h4>
+<p><strong>Problem:</strong> Users report slow response from a web application.<br />
+<strong>Solution:</strong></p>
+<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span>-n<span class="w"> </span>DEV<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span><span class="w">                     </span><span class="c1"># Monitor network interfaces in real-time</span>
+sar<span class="w"> </span>-n<span class="w"> </span>TCP,ETCP<span class="w">                    </span><span class="c1"># Check TCP connection statistics</span>
+</code></pre></div>
+
+<ul>
+<li><strong>Check:</strong> High retransmission rates or packet loss indicate network issues.</li>
+</ul>
+<hr />
+<h3 id="7-best-practices"><strong>7. Best Practices:</strong><a class="headerlink" href="#7-best-practices" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Automate Data Collection:</strong></li>
+<li>Use cron jobs to collect SAR data at regular intervals.</li>
+<li>Example:
+     <code>bash
+     */10 * * * * /usr/lib64/sa/sa1 1 1</code></li>
+<li><strong>Regular Analysis:</strong></li>
+<li>Check SAR logs daily to identify patterns or anomalies.</li>
+<li><strong>Correlate Metrics:</strong></li>
+<li>Cross-reference CPU, memory, disk, and network data to find root causes.</li>
+<li><strong>Filter and Save Data:</strong></li>
+<li>Use <code>grep</code> to isolate relevant information:
+     <code>bash
+     sar -u | grep '12:00'</code></li>
+</ol>
+<hr />
+<h3 id="8-summary"><strong>8. Summary:</strong><a class="headerlink" href="#8-summary" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SAR</strong> is a powerful tool for real-time and historical performance monitoring.</li>
+<li><strong>Usage:</strong> Monitor CPU, memory, disk I/O, and network statistics.</li>
+<li><strong>Troubleshooting:</strong> Analyze trends to pinpoint performance bottlenecks.</li>
+<li><strong>Best Practice:</strong> Automate data collection and perform regular reviews.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../4.2.%20more%20monitoring%20tools/" class="btn btn-neutral float-left" title="More Monitoring Tools"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../4.4.%20notes/" class="btn btn-neutral float-right" title="Extras">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../4.2.%20more%20monitoring%20tools/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../4.4.%20notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

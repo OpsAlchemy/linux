@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Overview - Linux Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Overview";
+        var mkdocs_page_input_path = "2. data-streams.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Linux Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">1. Core Utilities</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.%20core-utils/">Core Utilities Guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">2. Data Streams</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Overview</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stdio-file-handles">STDIO File Handles</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#basic-commands-and-their-outputs">Basic Commands and Their Outputs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#generating-data-streams-with-yes">Generating Data Streams with yes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#filling-a-drive-testing-directory-full-scenarios">Filling a Drive (Testing Directory Full Scenarios)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#real-world-use-case">Real-World Use Case</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exploring-disk-with-dd">Exploring Disk with dd</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#working-with-random-data">Working with Random Data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#piping-and-pipelines">Piping and Pipelines</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#redirection">Redirection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#grep-filtering-output">grep: Filtering Output</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary-of-key-utilities-and-their-uses">Summary of Key Utilities and Their Uses</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../2.1.%20data-streams-practices/">Practices</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">3. Working as Root</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../3.%20working-as-root/">Working as Root</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">4. Tools for Problem Solving</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../4.1.%20tools%20for%20problem%20solving/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../4.2.%20more%20monitoring%20tools/">More Monitoring Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../4.3.%20Hardware%20Exploration%20and%20System%20Stats/">System Stats</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../4.4.%20notes/">Extras</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Linux Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">2. Data Streams</li>
+      <li class="breadcrumb-item active">Overview</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="linux-data-streams-stdio-and-pipelines-documentation">Linux Data Streams, STDIO, and Pipelines Documentation<a class="headerlink" href="#linux-data-streams-stdio-and-pipelines-documentation" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>A <strong>data stream</strong> in Unix and Linux is a continuous flow of text data passed from one file, device, or program to another, usually via <strong>Standard Input/Output (STDIO)</strong>. Streams are the foundational building blocks of Unix philosophy:</p>
+<blockquote>
+<p><em>"Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface."</em> — <em>Doug McIlroy</em></p>
+</blockquote>
+<hr />
+<h2 id="stdio-file-handles">STDIO File Handles<a class="headerlink" href="#stdio-file-handles" title="Permanent link">&para;</a></h2>
+<p>There are three default STDIO streams:</p>
+<ul>
+<li><strong>STDIN</strong> (File handle 0): Standard Input (usually the keyboard).</li>
+<li><strong>STDOUT</strong> (File handle 1): Standard Output (usually the display).</li>
+<li><strong>STDERR</strong> (File handle 2): Standard Error (also the display).</li>
+</ul>
+<p>These are implemented in C using the <code>stdio.h</code> header. Each STDIO stream is opened automatically when a program starts.</p>
+<ul>
+<li>STDIN can be redirected from any file (even device files).</li>
+<li>STDOUT can be redirected to files or piped to other programs.</li>
+<li>STDERR is independent and by default sent to the screen.</li>
+</ul>
+<p>Redirection makes it possible to separate output from errors, improving usability in scripts and pipelines.</p>
+<hr />
+<h2 id="basic-commands-and-their-outputs">Basic Commands and Their Outputs<a class="headerlink" href="#basic-commands-and-their-outputs" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>root@studentvm1<span class="w"> </span>~<span class="o">]</span><span class="c1"># dmesg</span>
+<span class="o">[</span>root@studentvm1<span class="w"> </span>~<span class="o">]</span><span class="c1"># lsblk -i</span>
+</code></pre></div>
+
+<p>View disk partitions:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>root@studentvm1<span class="w"> </span>~<span class="o">]</span><span class="c1"># fdisk -l /dev/sdb</span>
+<span class="o">[</span>root@studentvm1<span class="w"> </span>~<span class="o">]</span><span class="c1"># mount /dev/sdb1 /mnt</span>
+</code></pre></div>
+
+<p>Ensure you verify the USB drive path on your VM before running commands. It may vary (e.g., <code>/dev/sdb</code>, <code>/dev/sdc</code>).</p>
+<hr />
+<h2 id="generating-data-streams-with-yes">Generating Data Streams with <code>yes</code><a class="headerlink" href="#generating-data-streams-with-yes" title="Permanent link">&para;</a></h2>
+<p>The <code>yes</code> command generates a continuous stream of data. It can:</p>
+<ul>
+<li>Demonstrate piping behavior</li>
+<li>Confirm deletions automatically</li>
+<li>Fill storage for testing</li>
+</ul>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>student@studentvm1<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>yes<span class="w"> </span><span class="m">123465789</span>-abcdefg
+</code></pre></div>
+
+<p>Interrupt using <code>Ctrl+C</code> (^C).</p>
+<p>To test deletion confirmation:</p>
+<div class="codehilite"><pre><span></span><code>yes<span class="w"> </span><span class="p">|</span><span class="w"> </span>rm<span class="w"> </span>*
+ll
+</code></pre></div>
+
+<p>Make sure <code>/mnt</code> is the current working directory before executing the above.</p>
+<hr />
+<h2 id="filling-a-drive-testing-directory-full-scenarios">Filling a Drive (Testing Directory Full Scenarios)<a class="headerlink" href="#filling-a-drive-testing-directory-full-scenarios" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Watch filesystem usage:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>root@studentvm1<span class="w"> </span>~<span class="o">]</span><span class="c1"># watch -n 1 df -h</span>
+</code></pre></div>
+
+<ol>
+<li>Fill with repeating data:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>root@studentvm1<span class="w"> </span>~<span class="o">]</span><span class="c1"># yes 123456789-abcdefgh &gt;&gt; /mnt/testfile.txt</span>
+</code></pre></div>
+
+<ol>
+<li>Clean up:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>root@studentvm1<span class="w"> </span>~<span class="o">]</span><span class="c1"># rm -f /mnt/testfile.txt ; umount /mnt</span>
+</code></pre></div>
+
+<h3 id="real-world-use-case">Real-World Use Case<a class="headerlink" href="#real-world-use-case" title="Permanent link">&para;</a></h3>
+<p>When <code>/tmp</code> is full, GUI login may fail because desktop sessions write to <code>/tmp</code>. CLI logins may still work because they don't need <code>/tmp</code> writes.</p>
+<hr />
+<h2 id="exploring-disk-with-dd">Exploring Disk with <code>dd</code><a class="headerlink" href="#exploring-disk-with-dd" title="Permanent link">&para;</a></h2>
+<p>Read the boot sector:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>root@studentvm1<span class="w"> </span>~<span class="o">]</span><span class="c1"># dd if=/dev/sdb bs=512 count=1</span>
+</code></pre></div>
+
+<ul>
+<li>Useful for analyzing partition layout.</li>
+<li>Binary and unreadable without interpretation.</li>
+</ul>
+<p>Understanding that <code>dd</code> can also read from partition devices (e.g., <code>/dev/sdb1</code>) helps in studying filesystem structures.</p>
+<p>If trying to locate file data manually, you may:
+- Start reading from the first partition
+- Skip empty space between boot sector and first partition
+- Use <code>less</code> to scroll output if terminal is too small</p>
+<hr />
+<h2 id="working-with-random-data">Working with Random Data<a class="headerlink" href="#working-with-random-data" title="Permanent link">&para;</a></h2>
+<p>Generate random bytes for testing or data wiping:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>student@studentvm1<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>od<span class="w"> </span>-c<span class="w"> </span>-N<span class="w"> </span><span class="m">50</span><span class="w"> </span>&lt;<span class="w"> </span>/dev/urandom
+</code></pre></div>
+
+<p>Use <code>dd</code> to write random data to a disk (be cautious!):</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>root@studentvm1<span class="w"> </span>~<span class="o">]</span><span class="c1"># dd if=/dev/urandom of=/dev/sda</span>
+</code></pre></div>
+
+<p>This is useful for:
+- Data destruction
+- Forensics testing
+- Ensuring irrecoverable deletions</p>
+<p>Alternative: Use <code>shred</code> for secure file erasure:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>root@studentvm1<span class="w"> </span>~<span class="o">]</span><span class="c1"># shred -vzn 3 /dev/sdb</span>
+</code></pre></div>
+
+<ul>
+<li><code>-v</code>: verbose</li>
+<li><code>-z</code>: add a final pass of zeros</li>
+<li><code>-n 3</code>: overwrite 3 times</li>
+</ul>
+<hr />
+<h2 id="piping-and-pipelines">Piping and Pipelines<a class="headerlink" href="#piping-and-pipelines" title="Permanent link">&para;</a></h2>
+<p>The <code>|</code> operator allows output from one command to become input for another.</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>student@studentvm1<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>w
+<span class="o">[</span>student@studentvm1<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>w<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n<span class="w"> </span>+3
+<span class="o">[</span>student@studentvm1<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>w<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n<span class="w"> </span>+3<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span>
+<span class="o">[</span>student@studentvm1<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>w<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n<span class="w"> </span>+3<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort
+<span class="o">[</span>student@studentvm1<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>w<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n<span class="w"> </span>+3<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq
+</code></pre></div>
+
+<p>Each step transforms the stream:
+1. <code>w</code>: who is logged in
+2. <code>tail</code>: skip header
+3. <code>awk</code>: extract usernames
+4. <code>sort</code>: alphabetical order
+5. <code>uniq</code>: remove duplicates</p>
+<p>Use <code>|&amp;</code> to include STDERR in the pipeline:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">command</span><span class="w"> </span><span class="p">|&amp;</span><span class="w"> </span>tee<span class="w"> </span>errorlog.txt
+</code></pre></div>
+
+<hr />
+<h2 id="redirection">Redirection<a class="headerlink" href="#redirection" title="Permanent link">&para;</a></h2>
+<p>Redirect STDOUT:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>student@studentvm1<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>df<span class="w"> </span>-h<span class="w"> </span>&gt;<span class="w"> </span>diskusage.txt
+</code></pre></div>
+
+<p>View output:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>student@studentvm1<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>cat<span class="w"> </span>diskusage.txt
+</code></pre></div>
+
+<p>Redirect STDIN:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>student@studentvm1<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>od<span class="w"> </span>-c<span class="w"> </span>-N<span class="w"> </span><span class="m">50</span><span class="w"> </span>&lt;<span class="w"> </span>/dev/urandom
+</code></pre></div>
+
+<hr />
+<h2 id="grep-filtering-output">grep: Filtering Output<a class="headerlink" href="#grep-filtering-output" title="Permanent link">&para;</a></h2>
+<p>Find USB-related messages in the kernel ring buffer:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>student@studentvm1<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>dmesg<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>usb
+</code></pre></div>
+
+<p><code>grep</code> is an essential utility in pipelines to extract meaningful data from streams.</p>
+<hr />
+<h2 id="summary-of-key-utilities-and-their-uses">Summary of Key Utilities and Their Uses<a class="headerlink" href="#summary-of-key-utilities-and-their-uses" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>yes</code></td>
+<td>Generate constant stream; auto-confirm prompts</td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td>Remove files</td>
+</tr>
+<tr>
+<td><code>watch</code></td>
+<td>Periodically run and display output</td>
+</tr>
+<tr>
+<td><code>df -h</code></td>
+<td>Human-readable disk usage</td>
+</tr>
+<tr>
+<td><code>dd</code></td>
+<td>Copy raw bytes from/to devices or files</td>
+</tr>
+<tr>
+<td><code>shred</code></td>
+<td>Secure deletion</td>
+</tr>
+<tr>
+<td><code>od</code></td>
+<td>Display binary data in readable format</td>
+</tr>
+<tr>
+<td><code>less</code></td>
+<td>Scroll long output</td>
+</tr>
+<tr>
+<td><code>awk</code></td>
+<td>Text processing utility</td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td>Sort input lines</td>
+</tr>
+<tr>
+<td><code>uniq</code></td>
+<td>Remove duplicates</td>
+</tr>
+<tr>
+<td><code>grep</code></td>
+<td>Pattern matching</td>
+</tr>
+<tr>
+<td><code>tail -n +3</code></td>
+<td>Skip first N lines</td>
+</tr>
+<tr>
+<td><code>mount/umount</code></td>
+<td>Mount or unmount filesystems</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Always verify devices before using destructive commands like <code>dd</code> or <code>shred</code>. It's safest to experiment on USB or virtual disks.</p>
+<p>This documentation continues to evolve as more experiments and situations are added.</p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../1.%20core-utils/" class="btn btn-neutral float-left" title="Core Utilities Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../2.1.%20data-streams-practices/" class="btn btn-neutral float-right" title="Practices">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../1.%20core-utils/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../2.1.%20data-streams-practices/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
