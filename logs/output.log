@@ -1,0 +1,960 @@
+nohup: ignoring input
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+INFO    -  Documentation built in 0.22 seconds
+INFO    -  [09:02:33] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO    -  [09:02:33] Serving on http://127.0.0.1:8000/
+INFO    -  [09:02:49] Browser connected: http://localhost:8000/
+INFO    -  [09:02:52] Browser connected: http://localhost:8000/1.%20core-utils/
+INFO    -  [09:03:06] Browser connected: http://localhost:8000/2.%20data-streams/
+INFO    -  [09:03:47] Browser connected: http://localhost:8000/2.1.%20data-streams-practices/
+INFO    -  [09:04:44] Browser connected: http://localhost:8000/3.%20working-as-root/
+INFO    -  [09:04:50] Browser connected: http://localhost:8000/4.%20tools-for-problem-solving/
+INFO    -  [09:04:53] Browser connected: http://localhost:8000/3.%20working-as-root/
+INFO    -  [09:04:56] Browser connected: http://localhost:8000/4.%20tools-for-problem-solving/
+INFO    -  [09:05:16] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.30 seconds
+INFO    -  [09:05:17] Reloading browsers
+INFO    -  [09:05:19] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.13 seconds
+INFO    -  [09:05:20] Reloading browsers
+INFO    -  [09:05:21] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [09:05:22] Reloading browsers
+INFO    -  [09:05:24] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.15 seconds
+INFO    -  [09:05:24] Reloading browsers
+INFO    -  [09:05:26] Browser connected: http://localhost:8000/4.%20tools-for-problem-solving/
+INFO    -  [09:05:41] Browser connected: http://localhost:8000/
+INFO    -  [09:06:57] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.12 seconds
+INFO    -  [09:06:57] Reloading browsers
+INFO    -  [09:06:59] Browser connected: http://localhost:8000/
+INFO    -  [09:07:02] Browser connected: http://localhost:8000/1.%20core-utils/
+INFO    -  [09:07:06] Browser connected: http://localhost:8000/2.%20data-streams/
+INFO    -  [09:07:11] Browser connected: http://localhost:8000/3.%20working-as-root/
+INFO    -  [09:07:14] Browser connected: http://localhost:8000/4.%20tools-for-problem-solving/
+INFO    -  [09:11:03] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.16 seconds
+INFO    -  [09:11:04] Reloading browsers
+INFO    -  [09:11:14] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.14 seconds
+INFO    -  [09:11:15] Reloading browsers
+INFO    -  [15:56:54] Browser connected: http://localhost:8000/4.%20tools-for-problem-solving/
+INFO    -  [15:56:57] Browser connected: http://localhost:8000/3.%20working-as-root/
+INFO    -  [18:43:21] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.54 seconds
+INFO    -  [18:43:21] Reloading browsers
+INFO    -  [18:46:02] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.25 seconds
+INFO    -  [18:46:03] Reloading browsers
+INFO    -  [18:46:07] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [18:46:07] Reloading browsers
+INFO    -  [18:46:14] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [18:46:14] Reloading browsers
+INFO    -  [18:46:47] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.35 seconds
+INFO    -  [18:46:48] Reloading browsers
+INFO    -  [18:47:00] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [18:47:01] Reloading browsers
+INFO    -  [18:47:08] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [18:47:08] Reloading browsers
+INFO    -  [18:47:15] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [18:47:16] Reloading browsers
+INFO    -  [18:47:22] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [18:47:22] Reloading browsers
+INFO    -  [18:47:33] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.17 seconds
+INFO    -  [18:47:33] Reloading browsers
+INFO    -  [18:47:39] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [18:47:40] Reloading browsers
+INFO    -  [18:47:46] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [18:47:46] Reloading browsers
+INFO    -  [18:47:55] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.18 seconds
+INFO    -  [18:47:56] Reloading browsers
+INFO    -  [18:48:05] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [18:48:05] Reloading browsers
+INFO    -  [18:48:17] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [18:48:17] Reloading browsers
+INFO    -  [18:48:45] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.24 seconds
+INFO    -  [18:48:45] Reloading browsers
+INFO    -  [18:49:06] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [18:49:06] Reloading browsers
+INFO    -  [18:50:44] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [18:50:45] Reloading browsers
+INFO    -  [18:51:03] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.75 seconds
+INFO    -  [18:51:03] Reloading browsers
+INFO    -  [18:54:47] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1 overview.md
+WARNING -  A reference to '4. tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  Documentation built in 0.23 seconds
+INFO    -  [18:54:47] Reloading browsers
+INFO    -  [18:54:47] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1 overview.md
+WARNING -  A reference to '4. tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:54:48] Reloading browsers
+INFO    -  [18:55:10] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1 overview.md
+  - 4.2. tools for problem solving.md
+WARNING -  A reference to '4. tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:55:10] Reloading browsers
+INFO    -  [18:55:19] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1 overview.md
+  - 4.2. tools for problem solving.md
+WARNING -  A reference to '4. tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  Documentation built in 0.19 seconds
+INFO    -  [18:55:19] Reloading browsers
+INFO    -  [18:56:51] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1 overview.md
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4. tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:56:51] Reloading browsers
+INFO    -  [18:57:00] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1 notes.md
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4. tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:57:01] Reloading browsers
+INFO    -  [18:57:08] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4. tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:57:08] Reloading browsers
+INFO    -  [18:57:28] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4. tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:57:29] Reloading browsers
+INFO    -  [18:57:30] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4. tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:57:30] Reloading browsers
+INFO    -  [18:57:33] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4. tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:57:33] Reloading browsers
+INFO    -  [18:57:40] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4. tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  Documentation built in 0.20 seconds
+INFO    -  [18:57:41] Reloading browsers
+INFO    -  [18:57:59] Browser connected: http://localhost:8000/3.%20working-as-root/
+WARNING -  [18:58:01] "GET /4.%20tools-for-problem-solving.md HTTP/1.1" code 404
+INFO    -  [18:58:12] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4.1 tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:58:12] Reloading browsers
+INFO    -  [18:58:19] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4.1 tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:58:19] Reloading browsers
+INFO    -  [18:58:26] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4.1 tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:58:26] Reloading browsers
+INFO    -  [18:58:32] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4.1 tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:58:32] Reloading browsers
+INFO    -  [18:58:33] Detected file changes
+INFO    -  Building documentation...
+Traceback (most recent call last):
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/mkdocs/utils/yaml.py", line 132, in yaml_load
+    result = yaml.load(source, Loader=loader)
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/composer.py", line 111, in compose_sequence_node
+    node.value.append(self.compose_node(node, index))
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/composer.py", line 111, in compose_sequence_node
+    node.value.append(self.compose_node(node, index))
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/parser.py", line 425, in parse_block_mapping_first_key
+    return self.parse_block_mapping_key()
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/yaml/parser.py", line 438, in parse_block_mapping_key
+    raise ParserError("while parsing a block mapping", self.marks[-1],
+yaml.parser.ParserError: while parsing a block mapping
+expected <block end>, but found ':'
+  in "/workspaces/linux/mkdocs.yml", line 41, column 9
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/mkdocs/livereload/__init__.py", line 211, in _build_loop
+    self.builder()
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/mkdocs/commands/serve.py", line 64, in builder
+    config = get_config()
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/mkdocs/commands/serve.py", line 43, in get_config
+    config = load_config(
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/mkdocs/config/base.py", line 369, in load_config
+    cfg.load_file(fd)
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/mkdocs/config/defaults.py", line 213, in load_file
+    self.load_dict(yaml_load(config_file, loader))
+  File "/usr/local/py-utils/venvs/mkdocs/lib/python3.9/site-packages/mkdocs/utils/yaml.py", line 134, in yaml_load
+    raise exceptions.ConfigurationError(
+mkdocs.exceptions.ConfigurationError: MkDocs encountered an error parsing the configuration file: while parsing a block mapping
+expected <block end>, but found ':'
+  in "/workspaces/linux/mkdocs.yml", line 41, column 9
+ERROR   -  [18:58:33] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [18:58:38] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4.1 tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:58:39] Reloading browsers
+WARNING -  [18:58:43] "GET /4.%20tools-for-problem-solving.md HTTP/1.1" code 404
+INFO    -  [18:58:46] Browser connected: http://localhost:8000/3.%20working-as-root/
+INFO    -  [18:58:52] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4.1 tools-for-problem-solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:58:53] Reloading browsers
+INFO    -  [18:58:59] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:58:59] Reloading browsers
+INFO    -  [18:59:07] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:59:07] Reloading browsers
+INFO    -  [18:59:14] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  A reference to '4.2' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  Documentation built in 0.33 seconds
+INFO    -  [18:59:15] Reloading browsers
+INFO    -  [18:59:15] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+  - 4.2 notes.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  A reference to '4.2 ' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:59:16] Reloading browsers
+INFO    -  [18:59:18] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [18:59:18] Reloading browsers
+INFO    -  [18:59:20] Browser connected: http://localhost:8000/3.%20working-as-root/
+INFO    -  [18:59:23] Browser connected: http://localhost:8000/4.2%20notes/
+INFO    -  [19:02:36] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:02:37] Reloading browsers
+INFO    -  [19:02:47] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:02:47] Reloading browsers
+INFO    -  [19:02:59] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:02:59] Reloading browsers
+INFO    -  [19:03:16] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:03:17] Reloading browsers
+INFO    -  [19:03:23] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:03:24] Reloading browsers
+INFO    -  [19:03:30] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:03:30] Reloading browsers
+INFO    -  [19:03:36] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:03:37] Reloading browsers
+INFO    -  [19:03:44] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:03:45] Reloading browsers
+INFO    -  [19:03:51] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:03:52] Reloading browsers
+INFO    -  [19:03:58] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:03:58] Reloading browsers
+INFO    -  [19:04:09] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:04:10] Reloading browsers
+INFO    -  [19:04:19] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  Documentation built in 0.21 seconds
+INFO    -  [19:04:19] Reloading browsers
+INFO    -  [19:04:30] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:04:30] Reloading browsers
+INFO    -  [19:04:40] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:04:41] Reloading browsers
+INFO    -  [19:04:48] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:04:48] Reloading browsers
+INFO    -  [19:04:55] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:04:55] Reloading browsers
+INFO    -  [19:05:11] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:05:11] Reloading browsers
+INFO    -  [19:05:17] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:05:17] Reloading browsers
+INFO    -  [19:05:26] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:05:26] Reloading browsers
+INFO    -  [19:05:35] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:05:36] Reloading browsers
+INFO    -  [19:05:46] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:05:46] Reloading browsers
+INFO    -  [19:05:53] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:05:53] Reloading browsers
+INFO    -  [19:05:59] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:05:59] Reloading browsers
+INFO    -  [19:06:05] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:06:05] Reloading browsers
+INFO    -  [19:06:13] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:06:13] Reloading browsers
+INFO    -  [19:06:19] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:06:19] Reloading browsers
+INFO    -  [19:06:25] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:06:25] Reloading browsers
+INFO    -  [19:06:30] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:06:31] Reloading browsers
+INFO    -  [19:06:39] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:06:39] Reloading browsers
+INFO    -  [19:06:47] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:06:48] Reloading browsers
+INFO    -  [19:06:55] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:06:55] Reloading browsers
+INFO    -  [19:07:15] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:07:15] Reloading browsers
+INFO    -  [19:07:23] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:07:23] Reloading browsers
+INFO    -  [19:07:29] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:07:29] Reloading browsers
+INFO    -  [19:07:35] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:07:35] Reloading browsers
+INFO    -  [19:07:41] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:07:42] Reloading browsers
+INFO    -  [19:07:51] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:07:51] Reloading browsers
+INFO    -  [19:07:58] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:07:58] Reloading browsers
+INFO    -  [19:09:32] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:09:32] Reloading browsers
+INFO    -  [19:09:38] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  Documentation built in 0.27 seconds
+INFO    -  [19:09:39] Reloading browsers
+INFO    -  [19:09:47] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:09:47] Reloading browsers
+INFO    -  [19:09:55] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:09:56] Reloading browsers
+INFO    -  [19:10:02] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:10:03] Reloading browsers
+INFO    -  [19:10:10] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:10:11] Reloading browsers
+INFO    -  [19:10:18] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:10:18] Reloading browsers
+INFO    -  [19:10:28] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:10:29] Reloading browsers
+INFO    -  [19:10:35] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:10:35] Reloading browsers
+INFO    -  [19:11:05] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:11:06] Reloading browsers
+INFO    -  [19:11:23] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:11:23] Reloading browsers
+INFO    -  [19:13:32] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:13:32] Reloading browsers
+INFO    -  [19:14:29] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:14:30] Reloading browsers
+INFO    -  [19:14:48] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:14:49] Reloading browsers
+INFO    -  [19:26:16] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:26:16] Reloading browsers
+INFO    -  [19:26:18] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:26:18] Reloading browsers
+INFO    -  [19:26:33] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:26:33] Reloading browsers
+INFO    -  [19:29:38] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  Documentation built in 0.41 seconds
+INFO    -  [19:29:39] Reloading browsers
+INFO    -  [19:29:44] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:29:45] Reloading browsers
+INFO    -  [19:30:32] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools-for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:30:32] Reloading browsers
+INFO    -  [19:33:27] Browser connected: http://localhost:8000/4.2%20notes/
+WARNING -  [19:33:31] "GET /4.1%20tools-for-problem%20solving.md HTTP/1.1" code 404
+INFO    -  [19:33:49] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools for-problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:33:49] Reloading browsers
+INFO    -  [19:33:50] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools forproblem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:33:50] Reloading browsers
+INFO    -  [19:33:51] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.1. tools for problem solving.md
+WARNING -  A reference to '4.1 tools for problem solving.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:33:51] Reloading browsers
+WARNING -  [19:33:52] "GET /4.1%20tools-for-problem%20solving.md HTTP/1.1" code 404
+WARNING -  [19:33:55] "GET /4.1%20tools%20for%20problem%20solving.md HTTP/1.1" code 404
+INFO    -  [19:34:09] Detected file changes
+INFO    -  Building documentation...
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:34:09] Reloading browsers
+INFO    -  [19:34:21] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.2. notes.md
+WARNING -  A reference to '4.2 notes.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  Documentation built in 0.28 seconds
+INFO    -  [19:34:22] Reloading browsers
+INFO    -  [19:34:27] Detected file changes
+INFO    -  Building documentation...
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:34:28] Reloading browsers
+WARNING -  [19:34:29] "GET /4.1%20tools%20for%20problem%20solving.md HTTP/1.1" code 404
+INFO    -  [19:34:33] Browser connected: http://localhost:8000/4.1.%20tools%20for%20problem%20solving/
+INFO    -  [19:34:36] Browser connected: http://localhost:8000/4.2.%20notes/
+INFO    -  [19:34:40] Browser connected: http://localhost:8000/4.2.%20notes/
+INFO    -  [19:34:44] Browser connected: http://localhost:8000/4.1.%20tools%20for%20problem%20solving/
+INFO    -  [19:35:18] Browser connected: http://localhost:8000/4.2.%20notes/
+INFO    -  [19:36:19] Detected file changes
+INFO    -  Building documentation...
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:36:20] Reloading browsers
+INFO    -  [19:37:55] Detected file changes
+INFO    -  Building documentation...
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:37:56] Reloading browsers
+INFO    -  [19:37:58] Detected file changes
+INFO    -  Building documentation...
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:37:58] Reloading browsers
+INFO    -  [19:38:00] Detected file changes
+INFO    -  Building documentation...
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:38:01] Reloading browsers
+INFO    -  [19:38:08] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.2. more monitoring tools.md
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:38:08] Reloading browsers
+INFO    -  [19:38:14] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.2. more monitoring tools.md
+  - 4.3. notes.md
+WARNING -  A reference to '4.2. notes.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:38:14] Reloading browsers
+INFO    -  [19:38:23] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.2. more monitoring tools.md
+  - 4.4. notes.md
+WARNING -  A reference to '4.2. notes.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:38:23] Reloading browsers
+INFO    -  [19:38:30] Detected file changes
+INFO    -  Building documentation...
+ERROR   -  Config value 'nav': Expected nav item to be a string or dict, got None
+Aborted with a configuration error!
+ERROR   -  [19:38:30] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [19:38:31] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.2. more monitoring tools.md
+  - 4.4. notes.md
+WARNING -  A reference to 'M' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  A reference to '4.2. notes.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:38:31] Reloading browsers
+INFO    -  [19:38:38] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.2. more monitoring tools.md
+  - 4.4. notes.md
+WARNING -  A reference to '' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  A reference to '4.2. notes.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:38:38] Reloading browsers
+INFO    -  [19:38:52] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.4. notes.md
+WARNING -  A reference to '4.2. notes.md' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:38:52] Reloading browsers
+INFO    -  [19:38:57] Detected file changes
+INFO    -  Building documentation...
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:38:58] Reloading browsers
+INFO    -  [19:39:08] Detected file changes
+INFO    -  Building documentation...
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:39:08] Reloading browsers
+INFO    -  [19:39:31] Detected file changes
+INFO    -  Building documentation...
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:39:31] Reloading browsers
+INFO    -  [19:41:29] Detected file changes
+INFO    -  Building documentation...
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:41:29] Reloading browsers
+INFO    -  [19:41:31] Detected file changes
+INFO    -  Building documentation...
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:41:31] Reloading browsers
+INFO    -  [19:41:41] Detected file changes
+INFO    -  Building documentation...
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:41:41] Reloading browsers
+INFO    -  [19:43:19] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.3. Hardware Exploration.md
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:43:19] Reloading browsers
+INFO    -  [19:43:22] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.3. Hardware Exploration.md
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:43:22] Reloading browsers
+INFO    -  [19:43:25] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.3. Hardware Exploration.md
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  Documentation built in 0.29 seconds
+INFO    -  [19:43:25] Reloading browsers
+INFO    -  [19:43:37] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.3. Hardware Exploration and System Stats.md
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:43:37] Reloading browsers
+INFO    -  [19:43:48] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.3. Hardware Exploration and System Stats.md
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  Documentation built in 0.26 seconds
+INFO    -  [19:43:49] Reloading browsers
+INFO    -  [19:43:51] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.3. Hardware Exploration and System Stats.md
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:43:51] Reloading browsers
+INFO    -  [19:44:01] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - 4.3. Hardware Exploration and System Stats.md
+WARNING -  A reference to '' is included in the 'nav' configuration, which is not found in the documentation files.
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:44:01] Reloading browsers
+INFO    -  [19:44:11] Detected file changes
+INFO    -  Building documentation...
+WARNING -  Doc file 'index.md' contains a link '4. tools-for-problem-solving.md', but the target is not found among documentation files.
+INFO    -  [19:44:12] Reloading browsers
+WARNING -  [19:44:13] "GET /4.2.%20notes/ HTTP/1.1" code 404
+INFO    -  [19:44:18] Browser connected: http://localhost:8000/4.3.%20Hardware%20Exploration%20and%20System%20Stats/

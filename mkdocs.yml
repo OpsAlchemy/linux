@@ -32,17 +32,18 @@ theme:
 
 nav:
   - Home: index.md
-  - Core Utilities:
+  - 1. Core Utilities:
       - Core Utilities Guide: "1. core-utils.md"
-  - Data Streams:
+  - 2. Data Streams:
       - Overview: "2. data-streams.md"
       - Practices: "2.1. data-streams-practices.md"
-  - Working as Root:
-      - Guide: "3. working-as-root.md"
-  - Tools for Problem Solving:
-      - Guide: "4. tools-for-problem-solving.md"
-
-
+  - 3. Working as Root:
+      - Working as Root: "3. working-as-root.md"
+  - 4. Tools for Problem Solving:
+      - Overview: "4.1. tools for problem solving.md"
+      - More Monitoring Tools: "4.2. more monitoring tools.md"
+      - System Stats: "4.3. Hardware Exploration and System Stats.md"
+      - Extras: "4.4. notes.md"
 
 markdown_extensions:
   - admonition
