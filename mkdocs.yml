@@ -1,0 +1,55 @@
+# site_name: Linux Labs
+
+# theme:
+#   name: null
+#   custom_dir: /home/vscode/.local/lib/python3.9/site-packages/mkdocs_windmill
+
+# nav:
+#   - Home: index.md
+#   - Core Utilities: "1. core-utils.md"
+#   - Data Streams: "2. data-streams.md"
+#   - Working as Root: "3. working-as-root.md"
+#   - Tools for Problem Solving: "4. tools-for-problem-solving.md"
+
+# markdown_extensions:
+#   - admonition
+#   - codehilite
+#   - toc:
+#       permalink: true
+#   - tables
+#   - footnotes
+#   - def_list
+#   - attr_list
+
+site_name: Linux Labs
+theme:
+  name: readthedocs
+  language: en
+  features:
+    - navigation.top
+    - search.highlight
+    - content.code.annotate
+
+nav:
+  - Home: index.md
+  - Core Utilities:
+      - Core Utilities Guide: "1. core-utils.md"
+  - Data Streams:
+      - Overview: "2. data-streams.md"
+      - Practices: "2.1. data-streams-practices.md"
+  - Working as Root:
+      - Guide: "3. working-as-root.md"
+  - Tools for Problem Solving:
+      - Guide: "4. tools-for-problem-solving.md"
+
+
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - tables
+  - footnotes
+  - def_list
+  - attr_list

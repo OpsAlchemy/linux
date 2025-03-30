@@ -2,7 +2,7 @@
 
 PUBLIC_IP=$(terraform output -raw public_ip)
 
-PRIVATE_KEY="keys/private_key.pem"
+PRIVATE_KEY="/tmp/private_key.pem"
 
 USERNAME="azureuser"
 
