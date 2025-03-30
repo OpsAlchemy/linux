@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Practices - Linux Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Practices";
+        var mkdocs_page_input_path = "2.1. data-streams-practices.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Linux Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">1. Core Utilities</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../1.%20core-utils/">Core Utilities Guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">2. Data Streams</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../2.%20data-streams/">Overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Practices</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#part-1-core-stream-operations">Part 1: Core Stream Operations</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-1-redirect-output-to-a-file">Challenge 1: Redirect Output to a File</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-2-redirect-only-errors">Challenge 2: Redirect Only Errors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-3-combine-output-and-errors">Challenge 3: Combine Output and Errors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-4-read-input-from-user">Challenge 4: Read Input from User</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-5-read-input-from-a-file">Challenge 5: Read Input from a File</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-2-intermediate-stream-manipulation">Part 2: Intermediate Stream Manipulation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-6-filter-output-via-pipes">Challenge 6: Filter Output via Pipes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-7-save-and-display-output-simultaneously">Challenge 7: Save and Display Output Simultaneously</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-8-monitor-file-changes-in-real-time">Challenge 8: Monitor File Changes in Real Time</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-9-compare-directory-listings-using-process-substitution">Challenge 9: Compare Directory Listings Using Process Substitution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-10-log-cpu-usage-with-timestamp">Challenge 10: Log CPU Usage with Timestamp</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-3-advanced-streaming-and-ipc">Part 3: Advanced Streaming and IPC</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-11-use-a-named-pipe-mkfifo">Challenge 11: Use a Named Pipe (mkfifo)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-12-stream-logs-from-a-remote-host">Challenge 12: Stream Logs from a Remote Host</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-13-real-time-alert-on-failed-ssh-attempts">Challenge 13: Real-Time Alert on Failed SSH Attempts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-14-format-and-color-output-from-stream">Challenge 14: Format and Color Output from Stream</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge-15-parallel-stream-processing">Challenge 15: Parallel Stream Processing</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">3. Working as Root</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../3.%20working-as-root/">Working as Root</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">4. Tools for Problem Solving</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../4.1.%20tools%20for%20problem%20solving/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../4.2.%20more%20monitoring%20tools/">More Monitoring Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../4.3.%20Hardware%20Exploration%20and%20System%20Stats/">System Stats</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../4.4.%20notes/">Extras</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Linux Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">2. Data Streams</li>
+      <li class="breadcrumb-item active">Practices</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <hr />
+<h1 id="linux-streams-practice-lab-stdin-stdout-stderr-and-advanced-streams">Linux Streams Practice Lab: <code>STDIN</code>, <code>STDOUT</code>, <code>STDERR</code>, and Advanced Streams<a class="headerlink" href="#linux-streams-practice-lab-stdin-stdout-stderr-and-advanced-streams" title="Permanent link">&para;</a></h1>
+<p>This lab walks you through 15 exercises that build a strong foundation in Linux data streams. You’ll learn how to use standard input/output/error, redirection, pipes, real-time monitoring, and inter-process communication.</p>
+<hr />
+<h2 id="part-1-core-stream-operations">Part 1: Core Stream Operations<a class="headerlink" href="#part-1-core-stream-operations" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="challenge-1-redirect-output-to-a-file"><strong>Challenge 1: Redirect Output to a File</strong><a class="headerlink" href="#challenge-1-redirect-output-to-a-file" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+Write the string <code>Learning Linux Streams</code> into a file named <code>streams.txt</code>.</p>
+<p><strong>Solution</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Learning Linux Streams&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>streams.txt
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+The <code>&gt;</code> operator redirects standard output (STDOUT) to a file. If the file exists, it’s overwritten.</p>
+<hr />
+<h3 id="challenge-2-redirect-only-errors"><strong>Challenge 2: Redirect Only Errors</strong><a class="headerlink" href="#challenge-2-redirect-only-errors" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+List contents of <code>/etc</code> and a non-existent directory. Redirect only the error output to a file named <code>errors.log</code>.</p>
+<p><strong>Solution</strong></p>
+<div class="codehilite"><pre><span></span><code>ls<span class="w"> </span>/etc<span class="w"> </span>/nonexistent<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>errors.log
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+File descriptor <code>2</code> refers to standard error (STDERR). Using <code>2&gt;</code> allows redirecting error messages separately from standard output.</p>
+<hr />
+<h3 id="challenge-3-combine-output-and-errors"><strong>Challenge 3: Combine Output and Errors</strong><a class="headerlink" href="#challenge-3-combine-output-and-errors" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+Repeat the previous command, but redirect both STDOUT and STDERR to a file named <code>combined.log</code>.</p>
+<p><strong>Solution</strong></p>
+<div class="codehilite"><pre><span></span><code>ls<span class="w"> </span>/etc<span class="w"> </span>/nonexistent<span class="w"> </span>&gt;<span class="w"> </span>combined.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+<code>2&gt;&amp;1</code> tells the shell to send STDERR to the same place as STDOUT. This way, all output (success + error) goes into one file.</p>
+<hr />
+<h3 id="challenge-4-read-input-from-user"><strong>Challenge 4: Read Input from User</strong><a class="headerlink" href="#challenge-4-read-input-from-user" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+Create a Bash script that asks for user input and prints it back.</p>
+<p><strong>Solution (<code>input_echo.sh</code>)</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter something: &quot;</span><span class="w"> </span>input
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;You entered: </span><span class="nv">$input</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+<code>read</code> takes input from STDIN (usually the keyboard). <code>echo</code> writes it to STDOUT.</p>
+<hr />
+<h3 id="challenge-5-read-input-from-a-file"><strong>Challenge 5: Read Input from a File</strong><a class="headerlink" href="#challenge-5-read-input-from-a-file" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+Feed input into a script from a file instead of typing manually.</p>
+<p><strong>Solution</strong>
+Create <code>input.txt</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;streamed text&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>input.txt
+</code></pre></div>
+
+<p>Run script:</p>
+<div class="codehilite"><pre><span></span><code>./input_echo.sh<span class="w"> </span>&lt;<span class="w"> </span>input.txt
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+<code>&lt;</code> redirects a file into the STDIN of a command or script.</p>
+<hr />
+<h2 id="part-2-intermediate-stream-manipulation">Part 2: Intermediate Stream Manipulation<a class="headerlink" href="#part-2-intermediate-stream-manipulation" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="challenge-6-filter-output-via-pipes"><strong>Challenge 6: Filter Output via Pipes</strong><a class="headerlink" href="#challenge-6-filter-output-via-pipes" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+Create a file with multiple lines. Use <code>cat</code> and <code>grep</code> to display only lines containing a certain word.</p>
+<p><strong>Solution</strong></p>
+<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>&gt;<span class="w"> </span>sample.txt<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
+<span class="s">apple</span>
+<span class="s">banana</span>
+<span class="s">grape</span>
+<span class="s">apple pie</span>
+<span class="s">EOF</span>
+
+cat<span class="w"> </span>sample.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>apple
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+The <code>|</code> (pipe) takes the STDOUT of <code>cat</code> and passes it as STDIN to <code>grep</code>. This is called stream chaining.</p>
+<hr />
+<h3 id="challenge-7-save-and-display-output-simultaneously"><strong>Challenge 7: Save and Display Output Simultaneously</strong><a class="headerlink" href="#challenge-7-save-and-display-output-simultaneously" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+Display a message on the screen and save it to a file at the same time.</p>
+<p><strong>Solution</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Logging this&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>output.log
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+<code>tee</code> writes STDOUT to both the terminal and the specified file.</p>
+<hr />
+<h3 id="challenge-8-monitor-file-changes-in-real-time"><strong>Challenge 8: Monitor File Changes in Real Time</strong><a class="headerlink" href="#challenge-8-monitor-file-changes-in-real-time" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+Follow changes to a log file live and display lines containing a specific keyword.</p>
+<p><strong>Solution</strong></p>
+<div class="codehilite"><pre><span></span><code>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;sshd&quot;</span>
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+<code>tail -f</code> outputs new lines as they’re written to the file. Piping it to <code>grep</code> allows real-time filtering.</p>
+<hr />
+<h3 id="challenge-9-compare-directory-listings-using-process-substitution"><strong>Challenge 9: Compare Directory Listings Using Process Substitution</strong><a class="headerlink" href="#challenge-9-compare-directory-listings-using-process-substitution" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+Compare contents of two directories using <code>diff</code> without temporary files.</p>
+<p><strong>Solution</strong></p>
+<div class="codehilite"><pre><span></span><code>diff<span class="w"> </span>&lt;<span class="o">(</span>ls<span class="w"> </span>/etc<span class="o">)</span><span class="w"> </span>&lt;<span class="o">(</span>ls<span class="w"> </span>/usr<span class="o">)</span>
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+<code>&lt;(...)</code> is process substitution, which allows a command’s output to be treated like a file.</p>
+<hr />
+<h3 id="challenge-10-log-cpu-usage-with-timestamp"><strong>Challenge 10: Log CPU Usage with Timestamp</strong><a class="headerlink" href="#challenge-10-log-cpu-usage-with-timestamp" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+Create a loop that logs CPU usage every second along with a timestamp.</p>
+<p><strong>Solution</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="k">while</span><span class="w"> </span>true<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span>+%T<span class="k">)</span><span class="s2"> </span><span class="k">$(</span>vmstat<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $13+$14}&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="w">  </span>sleep<span class="w"> </span><span class="m">1</span>
+<span class="k">done</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>cpu_usage.log
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+<code>vmstat</code> shows CPU stats, <code>date</code> provides timestamps, and <code>tee</code> logs to file while showing real-time output.</p>
+<hr />
+<h2 id="part-3-advanced-streaming-and-ipc">Part 3: Advanced Streaming and IPC<a class="headerlink" href="#part-3-advanced-streaming-and-ipc" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="challenge-11-use-a-named-pipe-mkfifo"><strong>Challenge 11: Use a Named Pipe (<code>mkfifo</code>)</strong><a class="headerlink" href="#challenge-11-use-a-named-pipe-mkfifo" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+Create a FIFO, write to it from one terminal, and read from it in another.</p>
+<p><strong>Solution</strong></p>
+<div class="codehilite"><pre><span></span><code>mkfifo<span class="w"> </span>mypipe
+</code></pre></div>
+
+<p>Terminal 1:</p>
+<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>mypipe
+</code></pre></div>
+
+<p>Terminal 2:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello via pipe&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>mypipe
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+Named pipes enable communication between processes using the filesystem, acting as a stream between them.</p>
+<hr />
+<h3 id="challenge-12-stream-logs-from-a-remote-host"><strong>Challenge 12: Stream Logs from a Remote Host</strong><a class="headerlink" href="#challenge-12-stream-logs-from-a-remote-host" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+Use SSH to stream logs from a remote machine and filter them.</p>
+<p><strong>Solution</strong></p>
+<div class="codehilite"><pre><span></span><code>ssh<span class="w"> </span>user@remote-host<span class="w"> </span><span class="s1">&#39;tail -f /var/log/syslog&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;nginx&quot;</span>
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+Combines remote execution and local filtering. Useful for centralized log processing and monitoring.</p>
+<hr />
+<h3 id="challenge-13-real-time-alert-on-failed-ssh-attempts"><strong>Challenge 13: Real-Time Alert on Failed SSH Attempts</strong><a class="headerlink" href="#challenge-13-real-time-alert-on-failed-ssh-attempts" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+Watch authentication logs and alert when failed login attempts occur.</p>
+<p><strong>Solution</strong></p>
+<div class="codehilite"><pre><span></span><code>tail<span class="w"> </span>-F<span class="w"> </span>/var/log/auth.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>--line-buffered<span class="w"> </span><span class="s2">&quot;Failed password&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>line<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[ALERT] </span><span class="nv">$line</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+Monitors a log file in real time, filters it, and triggers an action for each matching line.</p>
+<hr />
+<h3 id="challenge-14-format-and-color-output-from-stream"><strong>Challenge 14: Format and Color Output from Stream</strong><a class="headerlink" href="#challenge-14-format-and-color-output-from-stream" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+Create a script that reads from STDIN and formats the output (e.g., with timestamps or color codes).</p>
+<p><strong>Solution</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>line<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\033[1;32m[</span><span class="k">$(</span>date<span class="w"> </span>+%T<span class="k">)</span><span class="s2">] </span><span class="nv">$line</span><span class="s2">\033[0m&quot;</span>
+<span class="k">done</span>
+</code></pre></div>
+
+<p>Use it with:</p>
+<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>sample.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>./formatter.sh
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+Adding ANSI codes to STDOUT allows dynamic formatting in the terminal (e.g., colors, timestamps).</p>
+<hr />
+<h3 id="challenge-15-parallel-stream-processing"><strong>Challenge 15: Parallel Stream Processing</strong><a class="headerlink" href="#challenge-15-parallel-stream-processing" title="Permanent link">&para;</a></h3>
+<p><strong>Task</strong><br />
+Process a single stream in multiple ways: log it, compress it, and display it live.</p>
+<p><strong>Solution</strong></p>
+<div class="codehilite"><pre><span></span><code>your_command<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>&gt;<span class="o">(</span>gzip<span class="w"> </span>&gt;<span class="w"> </span>out.gz<span class="o">)</span><span class="w"> </span>&gt;<span class="o">(</span>logger<span class="w"> </span>-t<span class="w"> </span>mystream<span class="o">)</span>
+</code></pre></div>
+
+<p><strong>Concept</strong><br />
+Combines <code>tee</code> with process substitution to split a stream into multiple destinations without duplicating commands.</p>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This lab covers:</p>
+<ul>
+<li>Core redirection (<code>&gt;</code>, <code>&lt;</code>, <code>2&gt;</code>, <code>2&gt;&amp;1</code>)</li>
+<li>Input/output chaining via pipes</li>
+<li>Real-time monitoring</li>
+<li>Process substitution</li>
+<li>Named pipes for IPC</li>
+<li>Stream branching with <code>tee</code></li>
+<li>Integration with remote systems and logging tools</li>
+</ul>
+<p>This is foundational knowledge for Linux administration, DevOps automation, log aggregation, and real-time data processing.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../2.%20data-streams/" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../3.%20working-as-root/" class="btn btn-neutral float-right" title="Working as Root">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../2.%20data-streams/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../3.%20working-as-root/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
