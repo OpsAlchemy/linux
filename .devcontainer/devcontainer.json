@@ -10,17 +10,25 @@
 		"ghcr.io/devcontainers/features/terraform:1": {},
 		"ghcr.io/duduribeiro/devcontainer-features/neovim:1": {},
 		"ghcr.io/devcontainers-extra/features/mkdocs:2": {}
-	}
-
+	},
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-
+	// "features": {
+	// 
+	// },
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
+	"forwardPorts": [
+		8000
+	],
 	// Configure tool-specific properties.
-	// "customizations": {},
-
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ahmadawais.shades-of-purple",
+				"mads-hartmann.bash-ide-vscode",
+				"ahmedhmy.bash-beautify"
+			]
+		}
+	}
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
